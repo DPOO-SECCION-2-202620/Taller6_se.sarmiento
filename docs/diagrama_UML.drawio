@@ -1,0 +1,302 @@
+<mxfile host="Electron">
+  <diagram name="Taller 6 - Diagrama de clases" id="taller6">
+    <mxGraphModel dx="3495" dy="2128" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3145" pageHeight="1374" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="id2" parent="1" style="rounded=1;arcSize=2;absoluteArcSize=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=14;spacingTop=6;fontStyle=1;fontSize=16;fontColor=#333333;" value="Mundo (uniandes.dpoo.swing.mundo)" vertex="1">
+          <mxGeometry height="860" width="440" x="25" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="id3" parent="1" style="rounded=1;arcSize=2;absoluteArcSize=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=14;spacingTop=6;fontStyle=1;fontSize=16;fontColor=#333333;" value="Ventana principal (interfaz.principal)" vertex="1">
+          <mxGeometry height="860" width="1120" x="535" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="id4" parent="1" style="rounded=1;arcSize=2;absoluteArcSize=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=14;spacingTop=6;fontStyle=1;fontSize=16;fontColor=#333333;" value="Mapa (interfaz.mapa)" vertex="1">
+          <mxGeometry height="860" width="460" x="1725" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="id5" parent="1" style="rounded=1;arcSize=2;absoluteArcSize=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=14;spacingTop=6;fontStyle=1;fontSize=16;fontColor=#333333;" value="Agregar restaurante (interfaz.agregar)" vertex="1">
+          <mxGeometry height="860" width="900" x="2205" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="id6" parent="1" style="rounded=1;arcSize=2;absoluteArcSize=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=14;spacingTop=6;fontStyle=1;fontSize=16;fontColor=#333333;" value="Librería Swing (javax.swing)" vertex="1">
+          <mxGeometry height="105" width="2570" x="535" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="id7" parent="1" style="rounded=1;arcSize=2;absoluteArcSize=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=14;spacingTop=6;fontStyle=1;fontSize=16;fontColor=#333333;" value="Librería Swing y AWT (javax.swing, javax.swing.event, java.awt.event)" vertex="1">
+          <mxGeometry height="219" width="2570" x="535" y="1115" as="geometry" />
+        </mxCell>
+        <mxCell id="id8" parent="1" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#FFFFCC;strokeColor=#B3B3B3;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fontSize=11;" value="Separación GUI / lógica: VentanaPrincipal es la única clase de la interfaz que conoce el mundo (Diario). Las demás ventanas y paneles le piden los datos a ella." vertex="1">
+          <mxGeometry height="93" width="250" x="575" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="id9" parent="1" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#FFFFCC;strokeColor=#B3B3B3;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fontSize=11;" value="paint() dibuja con Java2D un punto y el nombre de cada restaurante sobre el mapa." vertex="1">
+          <mxGeometry height="78" width="174" x="1808" y="835" as="geometry" />
+        </mxCell>
+        <mxCell id="id10" parent="1" style="shape=note;size=14;whiteSpace=wrap;html=1;fillColor=#FFFFCC;strokeColor=#B3B3B3;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fontSize=11;" value="Guarda en x, y la posición del último clic del usuario sobre el mapa." vertex="1">
+          <mxGeometry height="63" width="230" x="2865" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="id11" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#000000;" value="&lt;b&gt;Diario&lt;/b&gt;" vertex="1">
+          <mxGeometry height="128" width="310" x="60" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="id12" parent="id11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="- restaurantes: List&amp;lt;Restaurante&amp;gt;" vertex="1">
+          <mxGeometry height="25" width="310" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="id13" parent="id11" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="310" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="id14" parent="id11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="+ Diario(): ctor&lt;br&gt;+ getRestaurantes(completos): List&amp;lt;Restaurante&amp;gt;&lt;br&gt;+ agregarRestaurante(restaurante): void" vertex="1">
+          <mxGeometry height="55" width="310" y="73" as="geometry" />
+        </mxCell>
+        <mxCell id="id15" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#000000;" value="&lt;b&gt;Restaurante&lt;/b&gt;" vertex="1">
+          <mxGeometry height="248" width="370" x="60" y="687" as="geometry" />
+        </mxCell>
+        <mxCell id="id16" parent="id15" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="- nombre: String&lt;br&gt;- calificacion: int&lt;br&gt;- coordenadaX: int&lt;br&gt;- coordenadaY: int&lt;br&gt;+ visitado: boolean" vertex="1">
+          <mxGeometry height="85" width="370" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="id17" parent="id15" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="370" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="id18" parent="id15" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="+ Restaurante(nombre, calificacion, x, y, visitado): ctor&lt;br&gt;+ getNombre(): String&lt;br&gt;+ getCalificacion(): int&lt;br&gt;+ getX(): int&lt;br&gt;+ getY(): int&lt;br&gt;+ isVisitado(): boolean&lt;br&gt;+ toString(): String" vertex="1">
+          <mxGeometry height="115" width="370" y="133" as="geometry" />
+        </mxCell>
+        <mxCell id="id19" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#000000;" value="&lt;b&gt;VentanaPrincipal&lt;/b&gt;" vertex="1">
+          <mxGeometry height="207" width="340" x="925" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="id20" parent="id19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="" vertex="1">
+          <mxGeometry height="14" width="340" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="id21" parent="id19" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="id22" parent="id19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="+ VentanaPrincipal(elDiario): ctor&lt;br&gt;+ mostrarVetanaNuevoRestaurante(): void&lt;br&gt;+ mostrarVentanaMapa(): void&lt;br&gt;+ agregarRestaurante(nombre, calificacion, x, y,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;visitado): void&lt;br&gt;+ getRestaurantes(completos): List&amp;lt;Restaurante&amp;gt;&lt;br&gt;- actualizarRestaurantes(): void&lt;br&gt;+ cambiarRestauranteSeleccionado(seleccionado): void&lt;br&gt;+ main(args): void" vertex="1">
+          <mxGeometry height="145" width="340" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="id23" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#000000;" value="&lt;b&gt;PanelBotones&lt;/b&gt;" vertex="1">
+          <mxGeometry height="158" width="260" x="570" y="687" as="geometry" />
+        </mxCell>
+        <mxCell id="id24" parent="id23" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="- NUEVO: String = &amp;quot;nuevo&amp;quot;&lt;br&gt;- VER: String = &amp;quot;ver&amp;quot;&lt;br&gt;- butNuevo: JButton&lt;br&gt;- butVerTodos: JButton" vertex="1">
+          <mxGeometry height="70" width="260" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="id25" parent="id23" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="id26" parent="id23" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="+ PanelBotones(ventanaPrincipal): ctor&lt;br&gt;+ actionPerformed(e): void" vertex="1">
+          <mxGeometry height="40" width="260" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="id27" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#000000;" value="&lt;b&gt;PanelLista&lt;/b&gt;" vertex="1">
+          <mxGeometry height="158" width="290" x="880" y="687" as="geometry" />
+        </mxCell>
+        <mxCell id="id28" parent="id27" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="- listaDeRestaurantes: JList&amp;lt;Restaurante&amp;gt;&lt;br&gt;- dataModel: DefaultListModel&amp;lt;Restaurante&amp;gt;" vertex="1">
+          <mxGeometry height="40" width="290" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="id29" parent="id27" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="id30" parent="id27" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="+ PanelLista(ventanaPrincipal): ctor&lt;br&gt;+ actualizarRestaurantes(restaurantes): void&lt;br&gt;+ valueChanged(e): void&lt;br&gt;+ seleccionarRestaurante(restaurante): void" vertex="1">
+          <mxGeometry height="70" width="290" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="id31" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#000000;" value="&lt;b&gt;PanelDetallesRestaurante&lt;/b&gt;" vertex="1">
+          <mxGeometry height="173" width="400" x="1220" y="687" as="geometry" />
+        </mxCell>
+        <mxCell id="id32" parent="id31" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="- labNombre: JLabel&lt;br&gt;- labCalificacion: JLabel&lt;br&gt;- chkVisitado: JCheckBox" vertex="1">
+          <mxGeometry height="55" width="400" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="id33" parent="id31" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="400" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="id34" parent="id31" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="+ PanelDetallesRestaurante(): ctor&lt;br&gt;+ actualizarRestaurante(r): void&lt;br&gt;- actualizarRestaurante(nombre, calificacion, visitado): void&lt;br&gt;- buscarIconoCalificacion(calificacion): ImageIcon" vertex="1">
+          <mxGeometry height="70" width="400" y="103" as="geometry" />
+        </mxCell>
+        <mxCell id="id35" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#000000;" value="&lt;b&gt;VentanaMapa&lt;/b&gt;" vertex="1">
+          <mxGeometry height="158" width="340" x="1760" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="id36" parent="id35" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="- TODOS: String&lt;br&gt;- VISITADOS: String&lt;br&gt;- radioTodos: JRadioButton&lt;br&gt;- radioVisitados: JRadioButton" vertex="1">
+          <mxGeometry height="70" width="340" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="id37" parent="id35" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="id38" parent="id35" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="+ VentanaMapa(ventanaPrincipal, restaurantes): ctor&lt;br&gt;+ actionPerformed(e): void" vertex="1">
+          <mxGeometry height="40" width="340" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="id39" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#000000;" value="&lt;b&gt;PanelMapaVisualizar&lt;/b&gt;" vertex="1">
+          <mxGeometry height="128" width="280" x="1760" y="687" as="geometry" />
+        </mxCell>
+        <mxCell id="id40" parent="id39" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="- labMapa: JLabel" vertex="1">
+          <mxGeometry height="25" width="280" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="id41" parent="id39" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="id42" parent="id39" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="+ PanelMapaVisualizar(): ctor&lt;br&gt;+ paint(g): void&lt;br&gt;+ actualizarMapa(nuevosRestaurantes): void" vertex="1">
+          <mxGeometry height="55" width="280" y="73" as="geometry" />
+        </mxCell>
+        <mxCell id="id43" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#000000;" value="&lt;b&gt;VentanaAgregarRestaurante&lt;/b&gt;" vertex="1">
+          <mxGeometry height="117" width="290" x="2510" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="id44" parent="id43" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="" vertex="1">
+          <mxGeometry height="14" width="290" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="id45" parent="id43" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="id46" parent="id43" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="+ VentanaAgregarRestaurante(principal): ctor&lt;br&gt;+ agregarRestaurante(): void&lt;br&gt;+ cerrarVentana(): void" vertex="1">
+          <mxGeometry height="55" width="290" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="id47" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#000000;" value="&lt;b&gt;PanelEditarRestaurante&lt;/b&gt;" vertex="1">
+          <mxGeometry height="173" width="250" x="2240" y="687" as="geometry" />
+        </mxCell>
+        <mxCell id="id48" parent="id47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="- txtNombre: JTextField&lt;br&gt;- cbbCalificacion: JComboBox&amp;lt;String&amp;gt;&lt;br&gt;- cbbVisitado: JComboBox&amp;lt;String&amp;gt;" vertex="1">
+          <mxGeometry height="55" width="250" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="id49" parent="id47" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="250" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="id50" parent="id47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="+ PanelEditarRestaurante(): ctor&lt;br&gt;+ getVisitado(): boolean&lt;br&gt;+ getCalificacion(): int&lt;br&gt;+ getNombre(): String" vertex="1">
+          <mxGeometry height="70" width="250" y="103" as="geometry" />
+        </mxCell>
+        <mxCell id="id51" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#000000;" value="&lt;b&gt;PanelBotonesAgregar&lt;/b&gt;" vertex="1">
+          <mxGeometry height="158" width="300" x="2540" y="687" as="geometry" />
+        </mxCell>
+        <mxCell id="id52" parent="id51" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="- CREAR: String = &amp;quot;nuevo&amp;quot;&lt;br&gt;- CERRAR: String = &amp;quot;ver&amp;quot;&lt;br&gt;- butNuevo: JButton&lt;br&gt;- butCerrar: JButton" vertex="1">
+          <mxGeometry height="70" width="300" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="id53" parent="id51" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="300" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="id54" parent="id51" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="+ PanelBotonesAgregar(ventanaPrincipal): ctor&lt;br&gt;+ actionPerformed(e): void" vertex="1">
+          <mxGeometry height="40" width="300" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="id55" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#000000;" value="&lt;b&gt;PanelMapaAgregar&lt;/b&gt;" vertex="1">
+          <mxGeometry height="233" width="180" x="2890" y="687" as="geometry" />
+        </mxCell>
+        <mxCell id="id56" parent="id55" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="- labMapa: JLabel&lt;br&gt;- x: int&lt;br&gt;- y: int" vertex="1">
+          <mxGeometry height="55" width="180" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="id57" parent="id55" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="180" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="id58" parent="id55" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="+ PanelMapaAgregar(): ctor&lt;br&gt;+ getCoordenadas(): int[]&lt;br&gt;+ paint(g): void&lt;br&gt;+ mouseClicked(e): void&lt;br&gt;+ mousePressed(e): void&lt;br&gt;+ mouseReleased(e): void&lt;br&gt;+ mouseEntered(e): void&lt;br&gt;+ mouseExited(e): void" vertex="1">
+          <mxGeometry height="130" width="180" y="103" as="geometry" />
+        </mxCell>
+        <mxCell id="id59" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" value="JFrame" vertex="1">
+          <mxGeometry height="40" width="170" x="1845" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="id60" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" value="JPanel" vertex="1">
+          <mxGeometry height="40" width="170" x="1335" y="1165" as="geometry" />
+        </mxCell>
+        <mxCell id="id61" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=44;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#000000;" value="«interface»&lt;br&gt;&lt;b&gt;ActionListener&lt;/b&gt;" vertex="1">
+          <mxGeometry height="69" width="180" x="1870" y="1165" as="geometry" />
+        </mxCell>
+        <mxCell id="id62" parent="id61" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="+ actionPerformed(e): void" vertex="1">
+          <mxGeometry height="25" width="180" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="id63" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=44;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#000000;" value="«interface»&lt;br&gt;&lt;b&gt;ListSelectionListener&lt;/b&gt;" vertex="1">
+          <mxGeometry height="69" width="170" x="940" y="1165" as="geometry" />
+        </mxCell>
+        <mxCell id="id64" parent="id63" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="+ valueChanged(e): void" vertex="1">
+          <mxGeometry height="25" width="170" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="id65" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=44;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#000000;" value="«interface»&lt;br&gt;&lt;b&gt;MouseListener&lt;/b&gt;" vertex="1">
+          <mxGeometry height="129" width="170" x="2895" y="1165" as="geometry" />
+        </mxCell>
+        <mxCell id="id66" parent="id65" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" value="+ mouseClicked(e): void&lt;br&gt;+ mousePressed(e): void&lt;br&gt;+ mouseReleased(e): void&lt;br&gt;+ mouseEntered(e): void&lt;br&gt;+ mouseExited(e): void" vertex="1">
+          <mxGeometry height="85" width="170" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="id67" edge="1" parent="1" source="id19" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;jumpStyle=arc;jumpSize=8;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#000000;exitX=0.5;exitY=0.0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1.0;entryDx=0;entryDy=0;entryPerimeter=0;" target="id59">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1095" y="160" />
+              <mxPoint x="1930" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="id68" edge="1" parent="1" source="id35" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;jumpStyle=arc;jumpSize=8;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#000000;exitX=0.5;exitY=0.0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1.0;entryDx=0;entryDy=0;entryPerimeter=0;" target="id59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="id69" edge="1" parent="1" source="id43" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;jumpStyle=arc;jumpSize=8;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#000000;exitX=0.5;exitY=0.0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1.0;entryDx=0;entryDy=0;entryPerimeter=0;" target="id59">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2655" y="160" />
+              <mxPoint x="1930" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="id70" edge="1" parent="1" source="id19" style="endArrow=classic;endFill=1;html=1;rounded=0;jumpStyle=arc;jumpSize=8;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#000000;exitX=1.0;exitY=0.3;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.0;entryY=0.393;entryDx=0;entryDy=0;entryPerimeter=0;" target="id35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="id71" connectable="0" parent="id70" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;labelBackgroundColor=#FFFFFF;" value="ventanaMapa" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="id72" connectable="0" parent="id70" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;labelBackgroundColor=none;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-16" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="id73" edge="1" parent="1" source="id35" style="endArrow=classic;endFill=1;html=1;rounded=0;jumpStyle=arc;jumpSize=8;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#000000;exitX=0.0;exitY=0.72;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.0;entryY=0.5496;entryDx=0;entryDy=0;entryPerimeter=0;" target="id19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="id74" connectable="0" parent="id73" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;labelBackgroundColor=#FFFFFF;" value="ventanaPrincipal" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="id75" connectable="0" parent="id73" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;labelBackgroundColor=none;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="16" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="id76" edge="1" parent="1" source="id19" style="endArrow=classic;endFill=1;html=1;rounded=0;jumpStyle=arc;jumpSize=8;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#000000;exitX=0.8;exitY=0.0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.2;entryY=0.0;entryDx=0;entryDy=0;entryPerimeter=0;" target="id43">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1197" y="270" />
+              <mxPoint x="2568" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="id77" connectable="0" parent="id76" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;labelBackgroundColor=#FFFFFF;" value="ventanaAgregar" vertex="1">
+          <mxGeometry relative="1" x="0.1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="id78" connectable="0" parent="id76" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;labelBackgroundColor=none;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="12" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="id79" edge="1" parent="1" source="id43" style="endArrow=classic;endFill=1;html=1;rounded=0;jumpStyle=arc;jumpSize=8;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#000000;exitX=0.35;exitY=0.0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.92;entryY=0.0;entryDx=0;entryDy=0;entryPerimeter=0;" target="id19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2612" y="240" />
+              <mxPoint x="1238" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="id80" connectable="0" parent="id79" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;labelBackgroundColor=#FFFFFF;" value="ventanaPrincipal" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="id81" connectable="0" parent="id79" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;labelBackgroundColor=none;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="12" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="id82" edge="1" parent="1" source="id19" style="endArrow=classic;endFill=1;html=1;rounded=0;jumpStyle=arc;jumpSize=8;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#000000;exitX=0.0;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.0;entryY=0.4043;entryDx=0;entryDy=0;entryPerimeter=0;" target="id11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="id83" connectable="0" parent="id82" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;labelBackgroundColor=#FFFFFF;" value="mundo" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="id84" connectable="0" parent="id82" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;labelBackgroundColor=none;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="16" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="id85" edge="1" parent="1" source="id11" style="endArrow=classic;endFill=1;html=1;rounded=0;jumpStyle=arc;jumpSize=8;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#000000;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.4189;entryY=0.0;entryDx=0;entryDy=0;entryPerimeter=0;" target="id15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
