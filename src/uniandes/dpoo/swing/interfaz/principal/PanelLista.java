@@ -33,24 +33,24 @@ public class PanelLista extends JPanel implements ListSelectionListener
      */
     private VentanaPrincipal ventanaPrincipal;
 
-    public PanelLista( VentanaPrincipal ventanaPrincipal )
+    public PanelLista(VentanaPrincipal ventanaPrincipal)
     {
         this.ventanaPrincipal = ventanaPrincipal;
-        setBorder( new TitledBorder( "Restaurantes" ) );
-        setLayout( new BorderLayout( ) );
+        setBorder(new TitledBorder("Restaurantes"));
+        setLayout(new BorderLayout());
 
         // Crea la lista con un modelo de datos en el que puede haber sólo restaurantes
-        dataModel = new DefaultListModel<>( );
-        listaDeRestaurantes = new JList<>( dataModel );
-        listaDeRestaurantes.setSelectionMode( ListSelectionModel.SINGLE_SELECTION );
-        listaDeRestaurantes.addListSelectionListener( this );
+        dataModel = new DefaultListModel<>();
+        listaDeRestaurantes = new JList<>(dataModel);
+        listaDeRestaurantes.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        listaDeRestaurantes.addListSelectionListener(this);
 
         // Crear un panel con barras de desplazamiento para la lista
-        JScrollPane scroll = new JScrollPane( listaDeRestaurantes );
-        scroll.setHorizontalScrollBarPolicy( JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED );
-        scroll.setVerticalScrollBarPolicy( JScrollPane.VERTICAL_SCROLLBAR_ALWAYS );
+        JScrollPane scroll = new JScrollPane(listaDeRestaurantes);
+        scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
-        add( scroll );
+        add(scroll);
     }
 
     /**
@@ -59,34 +59,34 @@ public class PanelLista extends JPanel implements ListSelectionListener
      * Para esto, lo que se modifica es el model (y no el JList)
      * @param restaurantes
      */
-    public void actualizarRestaurantes( List<Restaurante> restaurantes )
+    public void actualizarRestaurantes(List<Restaurante> restaurantes)
     {
-        List<Restaurante> nuevosRestaurantes = new ArrayList<Restaurante>( );
-        for( Restaurante q : restaurantes )
+        List<Restaurante> nuevosRestaurantes = new ArrayList<Restaurante>();
+        for(Restaurante q : restaurantes)
         {
-            if( !dataModel.contains( q ) )
-                nuevosRestaurantes.add( q );
+            if(!dataModel.contains(q))
+                nuevosRestaurantes.add(q);
         }
-        dataModel.addAll( nuevosRestaurantes );
+        dataModel.addAll(nuevosRestaurantes);
     }
 
     @Override
-    public void valueChanged( ListSelectionEvent e )
+    public void valueChanged(ListSelectionEvent e)
     {
         // Revisa cuál es el restaurante seleccionado actualmente
-        Restaurante seleccionado = listaDeRestaurantes.getSelectedValue( );
+        Restaurante seleccionado = listaDeRestaurantes.getSelectedValue();
 
         // Le envía la ventana principal el restaurante seleccionado para que se actualice el resto de la interfaz
-        this.ventanaPrincipal.cambiarRestauranteSeleccionado( seleccionado );
+        this.ventanaPrincipal.cambiarRestauranteSeleccionado(seleccionado);
     }
 
     /**
      * Cambia el restaurante seleccionado en la lista
      * @param restaurante
      */
-    public void seleccionarRestaurante( Restaurante restaurante )
+    public void seleccionarRestaurante(Restaurante restaurante)
     {
-        listaDeRestaurantes.setSelectedValue( restaurante, true );
+        listaDeRestaurantes.setSelectedValue(restaurante, true);
     }
 
 }

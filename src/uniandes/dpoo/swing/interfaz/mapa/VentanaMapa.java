@@ -46,7 +46,7 @@ public class VentanaMapa extends JFrame implements ActionListener
      */
     private VentanaPrincipal ventanaPrincipal;
 
-    public VentanaMapa( VentanaPrincipal ventanaPrincipal, List<Restaurante> restaurantes )
+    public VentanaMapa(VentanaPrincipal ventanaPrincipal, List<Restaurante> restaurantes)
     {
         this.ventanaPrincipal = ventanaPrincipal;
 
@@ -57,23 +57,23 @@ public class VentanaMapa extends JFrame implements ActionListener
         // TODO completar
 
         // Termina de configurar la ventana y la muestra
-        pack( );
-        setResizable( false );
-        setDefaultCloseOperation( DISPOSE_ON_CLOSE );
-        setLocationRelativeTo( null );
+        pack();
+        setResizable(false);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        setLocationRelativeTo(null);
     }
 
     @Override
-    public void actionPerformed( ActionEvent e )
+    public void actionPerformed(ActionEvent e)
     {
-        String comando = e.getActionCommand( );
-        if( TODOS.equals( comando ) )
+        String comando = e.getActionCommand();
+        if(TODOS.equals(comando))
         {
-            panelMapa.actualizarMapa( ventanaPrincipal.getRestaurantes( true ) );
+            panelMapa.actualizarMapa(ventanaPrincipal.getRestaurantes(true));
         }
-        else if( VISITADOS.equals( comando ) )
+        else if(VISITADOS.equals(comando))
         {
-            panelMapa.actualizarMapa( ventanaPrincipal.getRestaurantes( false ) );
+            panelMapa.actualizarMapa(ventanaPrincipal.getRestaurantes(false));
         }
     }
 

@@ -28,11 +28,11 @@ public class PanelBotonesAgregar extends JPanel implements ActionListener
      */
     private VentanaAgregarRestaurante ventanaPrincipal;
 
-    public PanelBotonesAgregar( VentanaAgregarRestaurante ventanaPrincipal )
+    public PanelBotonesAgregar(VentanaAgregarRestaurante ventanaPrincipal)
     {
         this.ventanaPrincipal = ventanaPrincipal;
 
-        setLayout( new FlowLayout( ) );
+        setLayout(new FlowLayout());
 
         // Agrega el botón para crear el restaurante
         // TODO completar
@@ -42,16 +42,16 @@ public class PanelBotonesAgregar extends JPanel implements ActionListener
     }
 
     @Override
-    public void actionPerformed( ActionEvent e )
+    public void actionPerformed(ActionEvent e)
     {
-        String comando = e.getActionCommand( );
-        if( comando.equals( CREAR ) )
+        String comando = e.getActionCommand();
+        if(comando.equals(CREAR))
         {
-            ventanaPrincipal.agregarRestaurante( );
+            ventanaPrincipal.agregarRestaurante();
         }
-        else if( comando.equals( CERRAR ) )
+        else if(comando.equals(CERRAR))
         {
-            ventanaPrincipal.cerrarVentana( );
+            ventanaPrincipal.cerrarVentana();
         }
     }
 }

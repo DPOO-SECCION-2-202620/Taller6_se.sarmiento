@@ -43,50 +43,54 @@ public class VentanaPrincipal extends JFrame
      */
     private VentanaAgregarRestaurante ventanaAgregar;
 
-    public VentanaPrincipal( Diario elDiario )
+    public VentanaPrincipal(Diario elDiario)
     {
         this.mundo = elDiario;
-        setLayout( new BorderLayout( ) );
+        setLayout(new BorderLayout());
 
         // Configura los componentes de la ventana
-        pBotones = new PanelBotones( this );
-        add( pBotones, BorderLayout.NORTH );
+        pBotones = new PanelBotones(this);
+        add(pBotones, BorderLayout.NORTH);
 
-        pLista = new PanelLista( this );
-        add( pLista );
+        pLista = new PanelLista(this);
+        add(pLista);
 
-        pDetalles = new PanelDetallesRestaurante( );
-        add( pDetalles, BorderLayout.SOUTH );
+        pDetalles = new PanelDetallesRestaurante();
+        add(pDetalles, BorderLayout.SOUTH);
 
         // Actualiza los restaurantes que se muestran
-        actualizarRestaurantes( );
+        actualizarRestaurantes();
 
         // Termina de configurar la ventana
-        setTitle( "Restaurantes" );
-        setDefaultCloseOperation( EXIT_ON_CLOSE );
-        setSize( 400, 600 );
-        setLocationRelativeTo( null );
-        setVisible( true );
+        setTitle("Restaurantes");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(400, 600);
+        setLocationRelativeTo(null);
+        setVisible(true);
     }
 
     /**
      * Abre la ventana para agregar un nuevo restaurante, si no está abierta ya
      */
-    public void mostrarVetanaNuevoRestaurante( )
+    public void mostrarVetanaNuevoRestaurante()
     {
-        if( ventanaAgregar == null || !ventanaAgregar.isVisible( ) )
+        if(ventanaAgregar == null || !ventanaAgregar.isVisible())
         {
-            ventanaAgregar = new VentanaAgregarRestaurante( this );
-            ventanaAgregar.setVisible( true );
+            ventanaAgregar = new VentanaAgregarRestaurante(this);
+            ventanaAgregar.setVisible(true);
         }
     }
 
     /**
      * Abre la ventana para mostrar el mapa de restaurante, si no está abierta ya
      */
-    public void mostrarVentanaMapa( )
+    public void mostrarVentanaMapa()
     {
-        // TODO completar mostrarVentanaMapa
+    	if(ventanaMapa == null || !ventanaMapa.isVisible())
+    	{
+    	    ventanaMapa = new VentanaMapa(this, getRestaurantes(true));
+    	    ventanaMapa.setVisible(true);
+    	}
     }
 
     /**
@@ -97,9 +101,11 @@ public class VentanaPrincipal extends JFrame
      * @param y La coordenada Y del nuevo restaurante
      * @param visitado Indica si el nuevo restaurante ya fue visitado o no
      */
-    public void agregarRestaurante( String nombre, int calificacion, int x, int y, boolean visitado )
+    public void agregarRestaurante(String nombre, int calificacion, int x, int y, boolean visitado)
     {
-        // TODO completar agregarRestaurante
+    	Restaurante nuevo = new Restaurante(nombre, calificacion, x, y, visitado);
+    	mundo.agregarRestaurante(nuevo);
+    	actualizarRestaurantes();
     }
 
     /**
@@ -109,43 +115,47 @@ public class VentanaPrincipal extends JFrame
      * @param completos Indica si se quieren todos los restaurantes o solo los ya visitados.
      * @return
      */
-    public List<Restaurante> getRestaurantes( boolean completos )
+    public List<Restaurante> getRestaurantes(boolean completos)
     {
-        return mundo.getRestaurantes( completos );
+        return mundo.getRestaurantes(completos);
     }
 
     /**
      * Actualiza los restaurantes que se muestran en la lista y el restaurante seleccionado del cual se muestran los detalles
      */
-    private void actualizarRestaurantes( )
+    private void actualizarRestaurantes()
     {
-        List<Restaurante> todos = this.mundo.getRestaurantes( true );
-        // TODO completar actualizarRestaurantes
+        List<Restaurante> todos = this.mundo.getRestaurantes(true);
+        pLista.actualizarRestaurantes(todos);
+        if(!todos.isEmpty())
+        {
+            pLista.seleccionarRestaurante(todos.get(todos.size() - 1));
+        }
     }
 
     /**
      * Cambia el restaurante actualmente seleccionado (y mostrado) por el que se pasa por parámetro
      * @param seleccionado
      */
-    public void cambiarRestauranteSeleccionado( Restaurante seleccionado )
+    public void cambiarRestauranteSeleccionado(Restaurante seleccionado)
     {
-        pDetalles.actualizarRestaurante( seleccionado );
+        pDetalles.actualizarRestaurante(seleccionado);
     }
 
     /**
      * Inicia la aplicación, creando un conjunto básico de restaurantes y luego creando la interfaz de la aplicación
      * @param args
      */
-    public static void main( String[] args )
+    public static void main(String[] args)
     {
-        Diario elDiario = new Diario( );
-        elDiario.agregarRestaurante( new Restaurante( "Pita Pan", 4, 30, 30, true ) );
-        elDiario.agregarRestaurante( new Restaurante( "Lord of the Wings", 5, 170, 210, true ) );
-        elDiario.agregarRestaurante( new Restaurante( "Nacho Business", 2, 350, 170, false ) );
-        elDiario.agregarRestaurante( new Restaurante( "Thai Tanic", 1, 110, 100, false ) );
-        elDiario.agregarRestaurante( new Restaurante( "Planet of the Creppes", 3, 400, 400, true ) );
+        Diario elDiario = new Diario();
+        elDiario.agregarRestaurante(new Restaurante("Pita Pan", 4, 30, 30, true));
+        elDiario.agregarRestaurante(new Restaurante("Lord of the Wings", 5, 170, 210, true));
+        elDiario.agregarRestaurante(new Restaurante("Nacho Business", 2, 350, 170, false));
+        elDiario.agregarRestaurante(new Restaurante("Thai Tanic", 1, 110, 100, false));
+        elDiario.agregarRestaurante(new Restaurante("Planet of the Creppes", 3, 400, 400, true));
 
-        new VentanaPrincipal( elDiario );
+        new VentanaPrincipal(elDiario);
     }
 
 }

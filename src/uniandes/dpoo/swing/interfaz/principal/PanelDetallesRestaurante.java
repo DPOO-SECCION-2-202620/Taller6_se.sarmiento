@@ -28,19 +28,28 @@ public class PanelDetallesRestaurante extends JPanel
      */
     private JCheckBox chkVisitado;
 
-    public PanelDetallesRestaurante( )
+    public PanelDetallesRestaurante()
     {
-        // Configura la etiqueta para el nombre
-        // TODO completar el constructor
+    	labNombre = new JLabel();
+    	JPanel panelNombre = new JPanel(new FlowLayout(FlowLayout.LEFT));
+    	panelNombre.add(new JLabel("Nombre: "));
+    	panelNombre.add(labNombre);
 
-        // Configura la etiqueta para la calificación
-        // TODO completar el constructor
+    	labCalificacion = new JLabel();
+    	JPanel panelCalificacion = new JPanel(new FlowLayout(FlowLayout.LEFT));
+    	panelCalificacion.add(new JLabel("Calificación: "));
+    	panelCalificacion.add(labCalificacion);
 
-        // Configura el checkbox para indicar si ya se visitaó o no el restaurante
-        // TODO completar el constructor
+    	chkVisitado = new JCheckBox();
+    	chkVisitado.setEnabled(false);
+    	JPanel panelVisitado = new JPanel(new FlowLayout(FlowLayout.LEFT));
+    	panelVisitado.add(new JLabel("Visitado: "));
+    	panelVisitado.add(chkVisitado);
 
-        // Organiza los elementos en la venta
-        // TODO completar el constructor
+    	setLayout(new GridLayout(3, 1));
+    	add(panelNombre);
+    	add(panelCalificacion);
+    	add(panelVisitado);
     }
 
     /**
@@ -49,18 +58,20 @@ public class PanelDetallesRestaurante extends JPanel
      * @param calificacion
      * @param visitado
      */
-    private void actualizarRestaurante( String nombre, int calificacion, boolean visitado )
+    private void actualizarRestaurante(String nombre, int calificacion, boolean visitado)
     {
-     // TODO completar actualizarRestaurante
+    	labNombre.setText(nombre);
+    	labCalificacion.setIcon(buscarIconoCalificacion(calificacion));
+    	chkVisitado.setSelected(visitado);
     }
 
     /**
      * Actualiza los datos que se muestran de un restaurante
      * @param r El restaurante que se debe mostrar
      */
-    public void actualizarRestaurante( Restaurante r )
+    public void actualizarRestaurante(Restaurante r)
     {
-        this.actualizarRestaurante( r.getNombre( ), r.getCalificacion( ), r.isVisitado( ) );
+        this.actualizarRestaurante(r.getNombre(), r.getCalificacion(), r.isVisitado());
     }
 
     /**
@@ -68,9 +79,9 @@ public class PanelDetallesRestaurante extends JPanel
      * @param calificacion La calificación del restaurante, que debe ser un numero entre 1 y 5.
      * @return Una imagen a la que corresponde la calificación
      */
-    private ImageIcon buscarIconoCalificacion( int calificacion )
+    private ImageIcon buscarIconoCalificacion(int calificacion)
     {
         String imagen = "./imagenes/stars" + calificacion + ".png";
-        return new ImageIcon( imagen );
+        return new ImageIcon(imagen);
     }
 }

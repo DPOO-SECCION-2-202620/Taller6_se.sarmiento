@@ -26,18 +26,18 @@ public class PanelMapaVisualizar extends JPanel
      */
     private List<Restaurante> restaurantes;
 
-    public PanelMapaVisualizar( )
+    public PanelMapaVisualizar()
     {
-        this.labMapa = new JLabel( new ImageIcon( "./imagenes/mapa.png" ) );
-        labMapa.setBorder( new LineBorder( Color.DARK_GRAY ) );
-        add( labMapa, BorderLayout.CENTER );
+        this.labMapa = new JLabel(new ImageIcon("./imagenes/mapa.png"));
+        labMapa.setBorder(new LineBorder(Color.DARK_GRAY));
+        add(labMapa, BorderLayout.CENTER);
     }
 
     @Override
-    public void paint( Graphics g )
+    public void paint(Graphics g)
     {
-        super.paint( g );
-        Graphics2D g2d = ( Graphics2D )g;
+        super.paint(g);
+        Graphics2D g2d = (Graphics2D)g;
 
      // TODO completar y hacer que se vean los nombres de todos los restaurantes en el mapa
     }
@@ -46,17 +46,17 @@ public class PanelMapaVisualizar extends JPanel
      * Actualiza la lista de restaurantes y llama al método repaint() para que se actualice el mapa
      * @param nuevosRestaurantes
      */
-    public void actualizarMapa( List<Restaurante> nuevosRestaurantes )
+    public void actualizarMapa(List<Restaurante> nuevosRestaurantes)
     {
-        if( restaurantes != null )
+        if(restaurantes != null)
         {
-            this.restaurantes.clear( );
-            this.restaurantes.addAll( nuevosRestaurantes );
+            this.restaurantes.clear();
+            this.restaurantes.addAll(nuevosRestaurantes);
         }
         else
         {
             this.restaurantes = nuevosRestaurantes;
         }
-        repaint( );
+        repaint();
     }
 }

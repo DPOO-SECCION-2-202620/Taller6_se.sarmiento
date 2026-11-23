@@ -30,10 +30,10 @@ public class VentanaAgregarRestaurante extends JFrame
      */
     private VentanaPrincipal ventanaPrincipal;
 
-    public VentanaAgregarRestaurante( VentanaPrincipal principal )
+    public VentanaAgregarRestaurante(VentanaPrincipal principal)
     {
         this.ventanaPrincipal = principal;
-        setLayout( new BorderLayout( ) );
+        setLayout(new BorderLayout());
 
         // Agrega el panel donde va a estar el mapa
         // TODO completar
@@ -42,16 +42,16 @@ public class VentanaAgregarRestaurante extends JFrame
         // TODO completar
 
         // Termina de configurar la ventana
-        pack( );
-        setLocationRelativeTo( null );
-        setDefaultCloseOperation( DISPOSE_ON_CLOSE );
-        setResizable( false );
+        pack();
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        setResizable(false);
     }
 
     /**
      * Le pide al panelDetalles los datos del nuevo restaurante y se los envía a la ventana principal para que cree el nuevo restaurante, y luego cierra la ventana.
      */
-    public void agregarRestaurante( )
+    public void agregarRestaurante()
     {
         // TODO completar
     }
@@ -59,9 +59,9 @@ public class VentanaAgregarRestaurante extends JFrame
     /**
      * Cierra la ventana sin crear un nuevo restaurante
      */
-    public void cerrarVentana( )
+    public void cerrarVentana()
     {
-        dispose( );
+        dispose();
     }
 
 }

@@ -26,7 +26,7 @@ public class PanelEditarRestaurante extends JPanel
      */
     private JComboBox<String> cbbVisitado;
 
-    public PanelEditarRestaurante( )
+    public PanelEditarRestaurante()
     {
         // Crea el campo para el nombre con una etiqueta al frente
         // TODO completar
@@ -46,7 +46,7 @@ public class PanelEditarRestaurante extends JPanel
      * Indica si en el selector se seleccionó la opción que dice que el restaurante fue visitado
      * @return
      */
-    public boolean getVisitado( )
+    public boolean getVisitado()
     {
         // TODO completar
         return false;
@@ -56,17 +56,17 @@ public class PanelEditarRestaurante extends JPanel
      * Indica la calificación marcada en el selector
      * @return
      */
-    public int getCalificacion( )
+    public int getCalificacion()
     {
-        String calif = ( String )cbbCalificacion.getSelectedItem( );
-        return Integer.parseInt( calif );
+        String calif = (String)cbbCalificacion.getSelectedItem();
+        return Integer.parseInt(calif);
     }
 
     /**
      * Indica el nombre digitado para el restaurante
      * @return
      */
-    public String getNombre( )
+    public String getNombre()
     {
         // TODO completar
         return "";
