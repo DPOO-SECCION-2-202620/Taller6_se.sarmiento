@@ -34,22 +34,22 @@ public class PanelMapaVisualizar extends JPanel
     }
 
     @Override
-    public void paint(Graphics g)
+    public void paint(Graphics graficos)
     {
-        super.paint(g);
-        Graphics2D g2d = (Graphics2D)g;
+        super.paint(graficos);
+        Graphics2D g2d = (Graphics2D)graficos;
 
         if( restaurantes != null )
         {
             int dx = labMapa.getX( );
             int dy = labMapa.getY( );
             g2d.setColor( Color.RED );
-            for( Restaurante r : restaurantes )
+            for( Restaurante restaurante : restaurantes )
             {
-                int x = r.getX( ) + dx;
-                int y = r.getY( ) + dy;
+                int x = restaurante.getX( ) + dx;
+                int y = restaurante.getY( ) + dy;
                 g2d.fillOval( x - 3, y - 3, 7, 7 );
-                g2d.drawString( r.getNombre( ), x + 6, y + 4 );
+                g2d.drawString( restaurante.getNombre( ), x + 6, y + 4 );
             }
         }
     }

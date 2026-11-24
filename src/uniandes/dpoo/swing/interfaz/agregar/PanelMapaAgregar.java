@@ -50,41 +50,41 @@ public class PanelMapaAgregar extends JPanel implements MouseListener
     }
 
     @Override
-    public void paint(Graphics g)
+    public void paint(Graphics graficos)
     {
-        super.paint(g);
+        super.paint(graficos);
 
         // Pinta un círculo rojo en la posición designada para el restaurante
-        Graphics2D g2d = (Graphics2D)g;
+        Graphics2D g2d = (Graphics2D)graficos;
         g2d.setColor(Color.red);
         g2d.fillOval(x - 3, y - 3, 7, 7);
     }
 
     @Override
-    public void mouseClicked(MouseEvent e)
+    public void mouseClicked(MouseEvent evento)
     {
-        this.x = e.getX();
-        this.y = e.getY();
+        this.x = evento.getX();
+        this.y = evento.getY();
         repaint();
     }
 
     @Override
-    public void mousePressed(MouseEvent e)
+    public void mousePressed(MouseEvent evento)
     {
     }
 
     @Override
-    public void mouseReleased(MouseEvent e)
+    public void mouseReleased(MouseEvent evento)
     {
     }
 
     @Override
-    public void mouseEntered(MouseEvent e)
+    public void mouseEntered(MouseEvent evento)
     {
     }
 
     @Override
-    public void mouseExited(MouseEvent e)
+    public void mouseExited(MouseEvent evento)
     {
     }
 

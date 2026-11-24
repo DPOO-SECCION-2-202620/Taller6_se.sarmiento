@@ -71,7 +71,7 @@ public class PanelLista extends JPanel implements ListSelectionListener
     }
 
     @Override
-    public void valueChanged(ListSelectionEvent e)
+    public void valueChanged(ListSelectionEvent evento)
     {
         // Revisa cuál es el restaurante seleccionado actualmente
         Restaurante seleccionado = listaDeRestaurantes.getSelectedValue();

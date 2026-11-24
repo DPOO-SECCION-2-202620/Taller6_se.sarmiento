@@ -67,11 +67,11 @@ public class PanelDetallesRestaurante extends JPanel
 
     /**
      * Actualiza los datos que se muestran de un restaurante
-     * @param r El restaurante que se debe mostrar
+     * @param restaurante El restaurante que se debe mostrar
      */
-    public void actualizarRestaurante(Restaurante r)
+    public void actualizarRestaurante(Restaurante restaurante)
     {
-        this.actualizarRestaurante(r.getNombre(), r.getCalificacion(), r.isVisitado());
+        this.actualizarRestaurante(restaurante.getNombre(), restaurante.getCalificacion(), restaurante.isVisitado());
     }
 
     /**

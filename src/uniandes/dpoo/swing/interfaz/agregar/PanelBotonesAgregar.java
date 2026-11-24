@@ -46,9 +46,9 @@ public class PanelBotonesAgregar extends JPanel implements ActionListener
     }
 
     @Override
-    public void actionPerformed(ActionEvent e)
+    public void actionPerformed(ActionEvent evento)
     {
-        String comando = e.getActionCommand();
+        String comando = evento.getActionCommand();
         if(comando.equals(CREAR))
         {
             ventanaPrincipal.agregarRestaurante();

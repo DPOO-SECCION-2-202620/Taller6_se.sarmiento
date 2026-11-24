@@ -81,9 +81,9 @@ public class VentanaMapa extends JFrame implements ActionListener
     }
 
     @Override
-    public void actionPerformed(ActionEvent e)
+    public void actionPerformed(ActionEvent evento)
     {
-        String comando = e.getActionCommand();
+        String comando = evento.getActionCommand();
         if(TODOS.equals(comando))
         {
             panelMapa.actualizarMapa(ventanaPrincipal.getRestaurantes(true));
