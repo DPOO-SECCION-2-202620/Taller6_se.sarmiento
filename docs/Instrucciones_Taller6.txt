@@ -1,0 +1,27 @@
+INSTRUCCIONES - TALLER 6 (DIARIO DE RESTAURANTES)
+
+Iniciar la aplicación
+
+1. Ejecutar como Java Application la clase VentanaPrincipal (paquete uniandes.dpoo.swing.interfaz.principal). Es la única clase con main.
+
+2. Se abre la ventana principal con la lista de restaurantes. Al seleccionar uno, abajo se muestran su nombre, su calificación en estrellas y si ya fue visitado.
+
+Datos iniciales
+
+Los crea el main de VentanaPrincipal cada vez que se inicia la aplicación. No se guardan: los restaurantes que se agreguen se pierden al cerrar.
+
+  Visitados
+    Pita Pan               4 estrellas
+    Lord of the Wings      5 estrellas
+    Planet of the Creppes  3 estrellas
+
+  No visitados
+    Nacho Business         2 estrellas
+    Thai Tanic             1 estrella
+
+Qué hace cada botón
+
+   Nuevo: abre la ventana para agregar un restaurante. Se hace clic en el mapa para marcar su ubicación (aparece un punto rojo), se escribe el nombre, se elige la calificación (1 a 5) y si ya fue visitado, y se presiona "Crear restaurante". El restaurante queda de último en la lista, ya seleccionado. "Cerrar" sale sin crear nada.
+
+   Ver todos: abre el mapa con todos los restaurantes marcados con un punto rojo y su nombre. Abajo se elige "Todos" para verlos todos o "Visitados" para ver solo los que ya fueron visitados.
+
